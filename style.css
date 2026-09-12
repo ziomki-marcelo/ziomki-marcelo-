@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #151515;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* DELIKATNE WZORY W TLE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(45deg, transparent 46%, #d8c8e8 47%, transparent 49%),
+        linear-gradient(-45deg, transparent 46%, #d8c8e8 47%, transparent 49%);
+    background-size: 150px 150px;
+}
+
+/* GŁÓWNY UKŁAD */
+.container {
+    width: 100%;
+    max-width: 900px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 70px 25px 40px;
+    text-align: center;
+}
+
+/* ZIOMKI MARCELO */
+.logo {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #7b2cbf;
+}
+
+/* FIOLETOWA KRESKA */
+.line {
+    width: 62px;
+    height: 6px;
+    margin: 35px auto;
+    background: #8b3fc9;
+    border-radius: 10px;
+}
+
+/* TYTUŁ */
+h1 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.35;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* PRZYCISKI */
+.documents {
+    width: 100%;
+    max-width: 520px;
+    margin: 55px auto 0;
+}
+
+.document-button {
+    display: block;
+    margin: 18px 0;
+    padding: 20px;
+    color: white;
+    background: #8438c7;
+    border: 7px solid #dbc5ed;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.document-button:hover {
+    background: #6925a8;
+    transform: translateY(-2px);
+}
+
+/* STRZAŁKA NA DOLE */
+.arrow {
+    margin-top: 90px;
+    font-size: 55px;
+    color: #171717;
+}
+
+/* TELEFON */
+@media (max-width: 600px) {
+
+    .container {
+        padding-top: 50px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .document-button {
+        font-size: 13px;
+    }
+}
+/* ===== REGULAMIN ZIOMKI MARCELO ===== */
+
+.rules-page {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 40px 0 70px;
+}
+
+.rules-page .back {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #7b2cbf;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.rules-page .back:hover {
+    transform: translateX(-4px);
+}
+
+.rules-page .logo {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 0.95;
+}
+
+.rules-page .logo span {
+    color: #7b2cbf;
+}
+
+.rules-page .line {
+    width: 90px;
+    height: 4px;
+    background: #7b2cbf;
+    margin: 22px auto 30px;
+    border-radius: 10px;
+}
+
+.rules-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.rules-page .intro {
+    text-align: center;
+    color: #777;
+    margin: 12px auto 35px;
+}
+
+/* SEKCJE */
+
+.rule-section {
+    margin-bottom: 14px;
+    border: 1px solid #dedede;
+    background: rgba(248, 248, 248, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.rule-section summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 19px 22px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #222;
+    transition: 0.2s;
+}
+
+.rule-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.rule-section summary::after {
+    content: "+";
+    float: right;
+    color: #7b2cbf;
+    font-size: 23px;
+    line-height: 17px;
+}
+
+.rule-section[open] summary::after {
+    content: "−";
+}
+
+.rule-section summary:hover {
+    color: #7b2cbf;
+    background: #f2f2f2;
+}
+
+.rule-section ol {
+    margin: 0;
+    padding: 20px 35px 22px 50px;
+    background: white;
+    border-top: 1px solid #e5e5e5;
+}
+
+.rule-section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.rule-section li:last-child {
+    margin-bottom: 0;
+}
+
+/* DÓŁ STRONY */
+
+.rules-page .bottom {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.rules-page .bottom-line {
+    width: 70px;
+    height: 3px;
+    background: #7b2cbf;
+    margin: 0 auto 18px;
+    border-radius: 10px;
+}
+
+.rules-page .bottom p {
+    font-weight: 800;
+    color: #7b2cbf;
+}
+
+.rules-page .bottom a {
+    color: #555;
+    text-decoration: none;
+}
+
+.rules-page .bottom a:hover {
+    color: #7b2cbf;
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+
+    .rules-page {
+        width: 94%;
+        padding-top: 25px;
+    }
+
+    .rules-page .logo {
+        font-size: 32px;
+    }
+
+    .rules-title {
+        font-size: 23px;
+    }
+
+    .rule-section summary {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .rule-section ol {
+        padding: 18px 20px 18px 38px;
+    }
+}
